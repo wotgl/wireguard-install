@@ -259,7 +259,7 @@ function newClient() {
 
 	BASE_IP=$(echo "$SERVER_WG_IPV4" | awk -F '.' '{ print $1"."$2"."$3 }')
 	DOT_IP="10.66.66.2"
-	CLIENT_WG_IPV4="${BASE_IP}.${DOT_IP}"
+	CLIENT_WG_IPV4="10.66.66.2"
 	#until [[ ${IPV4_EXISTS} == '0' ]]; do
 	#	read -rp "Client's WireGuard IPv4: ${BASE_IP}." -e -i "${DOT_IP}" DOT_IP
 	#	CLIENT_WG_IPV4="${BASE_IP}.${DOT_IP}"
@@ -274,7 +274,7 @@ function newClient() {
 
 	BASE_IP=$(echo "$SERVER_WG_IPV6" | awk -F '::' '{ print $1 }')
 	DOT_IP="fd42:42:42::2"
-	CLIENT_WG_IPV6="${BASE_IP}::${DOT_IP}"
+	CLIENT_WG_IPV6="fd42:42:42::2"
 	#until [[ ${IPV6_EXISTS} == '0' ]]; do
 	#	read -rp "Client's WireGuard IPv6: ${BASE_IP}::" -e -i "${DOT_IP}" DOT_IP
 	#	CLIENT_WG_IPV6="${BASE_IP}::${DOT_IP}"
